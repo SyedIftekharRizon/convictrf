@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-eqiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="description" content="Final Project" >
+<meta name="author" content="Syed Iftekhar Rizon" >
+<meta name="keywords" content="html,HTML">
+  <title>Form Submission</title>
+  <style>
+    body {
+      background-color: #000; /* black background */
+	  color:#2ECC71;
+	  font-family:cursive;
+	  
+    }
+    .form-container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #fff; /* white border */
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #E4EC0D; /* yellow labels */
+	  font-size:17px;
+    }
+    input[type="text"], input[type="password"], input[type="email"], input[type="date"], select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      background-color: #fff; /* white input color */
+      color: #333;
+	   font-size:17px;
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+      accent-color: #E4EC0D; /* yellow radio buttons */
+	   font-size:17px;
+    }
+    input[type="file"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #fff; /* white input color */
+      color: #333;
+	   font-size:17px;
+    }
+    input[type="submit"], input[type="reset"] {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+	   font-size:17px;
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #3e8e41;
+	   font-size:17px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container form-container">
+    <form action="https://usebasin.com/f/27079c5c5a28" method="post">
+      <h1 style="text-align:center;">CONVICT RF JOINING FORM</h1>
+      <div>
+        <label for="name">Name:</label><input type="text" name="username" id="name" required /><br><br>
+      </div>
+      <div>
+        <label for="pass">Password:</label><input type="Password" name="pass" id="pass" required minlength="8"/><br><br>
+      </div>
+      <div>
+        <label for="gmname">Game userame:</label><input type="text" name="gmname" id="gmname"/><br><br>
+      </div>
+      <div>
+        <label for="gjd">First Game Day :</label><input type="date" name="gjd" id="gjd"/><br><br>
+      </div>
+      <div>
+        <label for="ss">Game ID Information :</label><input type="file" name="ss" id="ss" required /><br><br>
+      </div>
+      <div>
+        <label for="email">Email:</label><input type="email" name="email" id="email" required /><br><br>
+      </div>
+      <div>
+        <label for="gender">Gender:</label><input type="radio" name="gender" id="gender" value="male"/>Male <input type="radio" name="gender" id="gender" value="female"/>Female
+      </div>
+      <div>
+        <label for="role">Role:</label> <select> <option value="rusher" selected >Rusher</option> <option value="dominator">Dominator</option> <option value="supporter">Supporter</option> <option value="sniper">Sniper</option> <option value="all">All-rounder</option> </select>
+      </div>
+      <div>
+        <label for="comment">Comment:</label><br> <textarea rows="10" cols="50"> </textarea>
+      </div>
+      <div>
+        <input type="submit" value="Register" name="data" id="da"> <input type="reset" value="Select Again" name="reset" id="re">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
