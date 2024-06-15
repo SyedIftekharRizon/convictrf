@@ -64,7 +64,7 @@
 </head>
 <body>
   <div class="container form-container">
-    <form action="https://usebasin.com/f/f81e8d26ac18" method="post">
+    <form onsubmit="sendEmail(); reset(); return false">
       <h1 style="text-align:center;">CONVICT RF JOINING FORM</h1>
       <div>
         <label for="name">Name:</label><input type="text" name="username" id="name" required /><br><br>
@@ -88,15 +88,45 @@
         <label for="gender">Gender:</label><input type="radio" name="gender" id="gender" value="male"/>Male <input type="radio" name="gender" id="gender" value="female"/>Female
       </div>
       <div>
-        <label for="role">Role:</label> <select> <option value="rusher" selected >Rusher</option> <option value="dominator">Dominator</option> <option value="supporter">Supporter</option> <option value="sniper">Sniper</option> <option value="all">All-rounder</option> </select>
+        <label for="role">Role:</label> <select id="role"> <option value="rusher" selected >Rusher</option> <option value="dominator">Dominator</option> <option value="supporter">Supporter</option> <option value="sniper">Sniper</option> <option value="all">All-rounder</option> </select>
       </div>
       <div>
-        <label for="comment">Comment:</label><br> <textarea rows="10" cols="50"> </textarea>
+        <label for="comment">Comment:</label><br> <textarea rows="10" cols="50" id="msg"> </textarea>
       </div>
       <div>
         <input type="submit" value="Register" name="data" id="da"> <input type="reset" value="Select Again" name="reset" id="re">
       </div>
     </form>
   </div>
+	<script>
+		src="https://smtpjs.com/v3/smtp.js"
+	</script>
+	<script>
+
+function sendEmail(){
+Email.send({
+    Host : "smtp.gmail.com",
+    Username : "alirajin242@gmail.com",
+    Password : "Newformtest23",
+    To : 'syediftekharrajin@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "This is CONVICT RF Form",
+    Body : "Name:"+ document.getElementById("name").value
+	+"<br> Password :"+document.getElementById("pass").value
+	    +"<br> Game userame:"+document.getElementById("gmname").value
+	    +"<br>First Game Day :"+document.getElementById("gjd").value
+	    +"<br> Game ID Information :"+document.getElementById("ss").value
+	    +"<br> Email:"+document.getElementById("email").value
+	      +"<br> Gender:"+document.getElementById("gender").value
+	      +"<br>Role:"+document.getElementById("role").value
+	      +"<br> Comment:"+document.getElementById("msg").value
+	 
+}).then(
+  message => alert("Form Submitted Successfully")
+);
+	
+}
+		
+	</script>
 </body>
 </html>
